@@ -1,11 +1,33 @@
-chrome.contextMenus.create({
-    title: "Twitter Social Tooltip!",
-    contexts: ["selection"],
-    onclick: myFunction
-});
+const contextsList = ["selection", "link", "image", "page"];
 
-function myFunction(txt) {
-    chrome.tabs.create({
-        url: `https://twitter.com/intent/tweet?text=${txt.selectionText}`
+for (const context of contextsList) {
+    const title = `Twitter Tooltip: share this ${context} on your twitter profile`;
+    chrome.contextMenus.create({
+        title: title,
+        contexts: [context],
+        onclick: myFunction,
+        id: context
     });
+}
+
+function myFunction(data, tab) {
+    console.log(data)
+    let = url = 'https://twitter.com/intent/tweet?';
+    switch (data.menuItemId) {
+        case 'selection':
+            chrome.windows.create({ url: `${url}text=${encodeURIComponent(data.selectionText)}`, type: "panel"});
+            break;
+
+        case 'link':
+            chrome.windows.create({ url: `${url}url=${encodeURIComponent(data.linkUrl)}`, type: "panel"});
+            break;
+
+        case 'image':
+            chrome.windows.create({ url: `${url}url=${encodeURIComponent(data.srcUrl)}`, type: "panel"});
+            break;
+
+        case 'page':
+            chrome.windows.create({ url: `${url}text=${encodeURIComponent(tab.title)})&url=${data.pageUrl}`, type: "panel"});
+            break;
+    }
 }
