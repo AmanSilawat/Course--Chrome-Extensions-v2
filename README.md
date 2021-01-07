@@ -4,7 +4,7 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
 
 ---
 
-##Environment
+## Environment
 
 1. extension popup Environment
 2. user page Environment
@@ -16,7 +16,7 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
    No Access to any chrome API and doesn't use inline script in popup.html. Make a extension popup view on click your extension icon.<br>
    Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can have a tooltip, a badge, and a popup.
    <br />
-    ```json
+    ```js
     {
         "name": "My extension",
         //...
@@ -55,7 +55,7 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
 
         > - Specific url : https://www.google.com/
         > - Only sub domain for Specific url: https://www.google.com/*
-        > - all url: ["http://*/*", "https://*/*"] (this is a wild card)
+        > - all url: ["http://\*/\*", "https://\*/\*"] (this is a wild card)
 
     - css: your style file path: './style.js'
     - js: your JavaScript file path: './script.js'
@@ -75,5 +75,6 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
         }
 
     ```
+    persistent false means background.js file is not running in background and this file is not required.
 
 <br/>
