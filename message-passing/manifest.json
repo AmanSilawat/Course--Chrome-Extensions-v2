@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Hello World",
+    "description": "Hello World",
+    "version": "1.0",
+
+    "browser_action": {
+        "default": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "64": "icon.png"
+    },
+    "content_scripts":[
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["my-script.js"]
+        }
+    ]
+}
