@@ -13,14 +13,13 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
 ---
 
 1. **browser action** <br>
-   No Access to any chrome API.
-   Make a extension popup view on click your extension icon.
+   No Access to any chrome API and doesn't use inline script in popup.html. Make a extension popup view on click your extension icon.<br>
    Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can have a tooltip, a badge, and a popup.
    <br />
     ```json
     {
         "name": "My extension",
-        ...
+        //...
         "browser_action": {
             "default_icon": {                    // optional
             "16": "images/icon16.png",           // optional
@@ -30,7 +29,7 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
             "default_title": "Google Mail",      // optional; shown in tooltip
             "default_popup": "popup.html"        // optional
         },
-        ...
+        //...
     }
     ```
     <br/>
@@ -46,7 +45,7 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
         "js": ["contentScript.js"]
     }
     ],
-    ...
+    //...
     ```
     <br />
 
@@ -67,12 +66,12 @@ This course tutorials on this link: [codedamn](https://www.youtube.com/playlist?
     ```json
         {
             "name": "Awesome Test Extension",
-            ...
+            //...
             "background": {
                 "scripts": ["background.js"],
                 "persistent": false
             },
-            ...
+            //...
         }
 
     ```

@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Override Chrome Page",
+    "description": "Override Chrome Page",
+    "version": "1.0",
+
+    "browser_action": {
+        "default": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "chrome_url_overrides": {
+        "newtab":"newtab.html"
+    },
+    "icons": {
+        "64": "icon.png"
+    },
+    "content_scripts":[
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["my-script.js"]
+        }
+    ]
+}
