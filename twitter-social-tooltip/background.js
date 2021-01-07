@@ -1,7 +1,7 @@
 const contextsList = ["selection", "link", "image", "page"];
 
 for (const context of contextsList) {
-    const title = `Twitter Tooltip: share this ${context} on your twitter profile`;
+    const title = `Twitter Toolkit: share this ${context} on your twitter profile`;
     chrome.contextMenus.create({
         title: title,
         contexts: [context],

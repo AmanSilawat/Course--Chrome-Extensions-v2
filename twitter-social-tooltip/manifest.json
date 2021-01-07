@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "Twitter Social Tooltip",
-	"description": "Twitter Social Tooltip",
+	"name": "Twitter Social Toolkit",
+	"description": "Twitter Social Toolkit",
 	"version": "1.0",
 	"background": {
 		"scripts": ["background.js"]
