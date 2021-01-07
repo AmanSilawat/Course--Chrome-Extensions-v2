@@ -1,0 +1,9 @@
+#custom_toolbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    background: #b0b0b0;
+    border: 0;
+    z-index: 999;
+}
