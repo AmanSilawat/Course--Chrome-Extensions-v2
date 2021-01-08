@@ -1,0 +1,13 @@
+{
+	"manifest_version": 2,
+	"name": "Chrome Tabs",
+	"description": "Allow to create new tab",
+	"version": "1",
+	"browser_action": {
+		"default_title": "Click to open new Google Tab"
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": ["tabs"]
+}
