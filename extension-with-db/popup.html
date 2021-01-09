@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                padding: 0px 8px;
+            }
+            input {
+                display: block;
+                margin: 8px 0px
+            }
+            input[type='text'] {
+                padding: 3px;
+                text-align: center;
+                font-size: 18px;
+            }
+            input[type='submit'] {
+                background: #7a7a7a;
+                color: #fff;
+                border: 0px;
+                padding: 10px 35px;
+                width: 100%;
+            }
+        </style>
+	</head>
+	<body>
+		<form method="POST">
+			<input type="text" name="name" placeholder="Your Name"/>
+            <input type="text" name="email" placeholder="Your Email"/>
+            <input type="submit" name="submitData" value="Submit" />
+        </form>
+        <script src="script.js"></script>
+	</body>
+</html>
