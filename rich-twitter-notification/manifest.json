@@ -1,0 +1,10 @@
+{
+	"manifest_version": 2,
+	"name": "Rich Twitter Notification 1",
+	"description": "Allows you to get notifications on desktop",
+	"background": {
+		"page": "background.html"
+	},
+	"version": "1.0",
+	"permissions": ["notifications", "https://twitter.com/i/notifications"]
+}
